@@ -15,3 +15,12 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+*.iml
+.idea/
+reports/
+report/
+out/
+logs/
+*.log
+*.avi
+*.mp4
