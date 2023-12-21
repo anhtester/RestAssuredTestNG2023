@@ -1,4 +1,4 @@
-package com.anhtester.Bai5_PhuongThucPOST;
+package com.anhtester.Bai5_POSTmethod;
 
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -7,8 +7,6 @@ import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.io.File;
 
 import static io.restassured.RestAssured.given;
 

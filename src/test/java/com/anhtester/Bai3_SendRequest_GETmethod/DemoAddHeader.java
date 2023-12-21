@@ -1,4 +1,4 @@
-package com.anhtester.Bai3_SendRequest_GET;
+package com.anhtester.Bai3_SendRequest_GETmethod;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

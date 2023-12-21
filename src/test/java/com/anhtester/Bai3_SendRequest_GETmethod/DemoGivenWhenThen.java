@@ -1,4 +1,4 @@
-package com.anhtester.Bai3_SendRequest_GET;
+package com.anhtester.Bai3_SendRequest_GETmethod;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
