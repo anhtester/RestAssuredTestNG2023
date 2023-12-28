@@ -1,5 +1,6 @@
 package com.anhtester.Bai7_Authentication_PUTmethod;
 
+import com.anhtester.common.VerifyDataUserBody;
 import com.anhtester.model.LoginPOJO;
 import com.anhtester.model.RegisterUserPOJO;
 import com.google.gson.Gson;
@@ -72,6 +73,9 @@ public class PUTmethod_TOKEN_COOKIE {
 
         String message = response.getBody().path("message");
         Assert.assertEquals(message, "Success", "The message not match.");
+
+        VerifyDataUserBody.verifyDataBodyUser(response, registerUserPOJO);
+
     }
     
 }

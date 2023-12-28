@@ -7,6 +7,7 @@ import lombok.*;
 @Data //Bao gồm Getter và Setter
 //@Getter
 //@Setter
+@Builder
 public class RegisterUserPOJO_Lombok {
     private String username;
     private String firstName;
@@ -15,10 +16,4 @@ public class RegisterUserPOJO_Lombok {
     private String password;
     private String phone;
     private int userStatus;
-
-    public RegisterUserPOJO_Lombok(String username, String firstName, String lastName) {
-        this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 }
