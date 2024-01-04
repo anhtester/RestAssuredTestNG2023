@@ -1,0 +1,11 @@
+{
+   "name": "Bob",
+   "age": 23,
+   "department": {
+      "name": "IT",
+      "position": {
+         "role": "lead",
+         "years": 3
+      }
+   }
+}
