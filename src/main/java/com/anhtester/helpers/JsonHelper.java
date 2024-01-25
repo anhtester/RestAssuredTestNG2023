@@ -40,6 +40,9 @@ public class JsonHelper {
         }
     }
 
+    //name
+    //response.category.name
+
     public static void updateValueJsonFile(String filePath, String keyName, String value) {
 
         Reader reader;
