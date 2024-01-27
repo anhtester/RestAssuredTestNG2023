@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteRunTest" verbose="1">
+    <test name="FirstTest">
+        <classes>
+            <class name="com.anhtester.Bai14_Annotation.DemoRunTestXML_01"/>
+            <class name="com.anhtester.Bai14_Annotation.DemoRunTestXML_02"/>
+        </classes>
+    </test>
+</suite>

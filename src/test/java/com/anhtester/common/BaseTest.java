@@ -8,6 +8,7 @@ import com.anhtester.model.data.LoginPOJO_Builder;
 import com.google.gson.Gson;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +16,11 @@ import org.testng.annotations.BeforeTest;
 import static io.restassured.RestAssured.given;
 
 public class BaseTest {
+
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("This is before class CHA");
+    }
 
     @BeforeSuite
     public void setupSuite() {
