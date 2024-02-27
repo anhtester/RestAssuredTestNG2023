@@ -3,24 +3,18 @@ package com.anhtester.common;
 import com.anhtester.globals.ConfigsGlobal;
 import com.anhtester.globals.TokenGlobal;
 import com.anhtester.helpers.PropertiesHelper;
+import com.anhtester.listeners.TestListener;
 import com.anhtester.model.LoginPOJO;
 import com.anhtester.model.data.LoginPOJO_Builder;
 import com.google.gson.Gson;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import static io.restassured.RestAssured.given;
 
+@Listeners(TestListener.class)
 public class BaseTest {
-
-    @BeforeClass
-    public void beforeClass(){
-        System.out.println("This is before class CHA");
-    }
 
     @BeforeSuite
     public void setupSuite() {
@@ -29,7 +23,6 @@ public class BaseTest {
 
     @BeforeTest
     public void loginUser() {
-        //LoginPOJO loginPOJO = new LoginPOJO(ConfigsGlobal.USERNAME, ConfigsGlobal.PASSWORD);
         LoginPOJO loginPOJO = LoginPOJO_Builder.getDataLogin();
 
         Gson gson = new Gson();

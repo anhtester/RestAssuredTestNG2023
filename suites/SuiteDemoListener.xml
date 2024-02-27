@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite">
+
+<!--    <listeners>-->
+<!--        <listener class-name="com.anhtester.listeners.TestListener"/>-->
+<!--    </listeners>-->
+
+    <test name="Test">
+        <classes>
+            <class name="com.anhtester.Bai15_TestListener.CategoryTest_Listener">
+            </class>
+        </classes>
+    </test>
+</suite>
