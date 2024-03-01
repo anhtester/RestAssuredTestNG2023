@@ -10,7 +10,7 @@ public class DemoReadProperties {
         PropertiesHelper.loadAllFiles();
 
         //Sau đó gọi hàm getValue để lấy giá trị theo tên key
-        System.out.println("URI: " + PropertiesHelper.getValue("URI"));
+        System.out.println("URI: " + PropertiesHelper.getValue("BASE_URI"));
         System.out.println("USERNAME: " + PropertiesHelper.getValue("USERNAME"));
         System.out.println("PASSWORD: " + PropertiesHelper.getValue("PASSWORD"));
     }
@@ -24,7 +24,7 @@ public class DemoReadProperties {
         PropertiesHelper.setFile("src/test/resources/config/demo.properties");
 
         //Gọi hàm setValue để gán giá trị theo key
-        PropertiesHelper.setValue("author", "Anh Tester");
+        PropertiesHelper.setValue("AUTHOR", "Anh Tester");
         PropertiesHelper.setValue("project", "API Automation");
     }
 }
