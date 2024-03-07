@@ -1,8 +1,10 @@
 package com.anhtester.common;
 
 import com.anhtester.globals.ConfigsGlobal;
+import com.anhtester.globals.EndPointGlobal;
 import com.anhtester.globals.TokenGlobal;
 import com.anhtester.helpers.PropertiesHelper;
+import com.anhtester.keywords.ApiKeyword;
 import com.anhtester.listeners.TestListener;
 import com.anhtester.model.LoginPOJO;
 import com.anhtester.model.data.LoginPOJO_Builder;
@@ -27,13 +29,16 @@ public class BaseTest {
 
         Gson gson = new Gson();
 
-        RequestSpecification request = given();
-        request.baseUri(ConfigsGlobal.URI)
-                .accept("application/json")
-                .contentType("application/json")
-                .body(gson.toJson(loginPOJO));
+//        RequestSpecification request = given();
+//        request.baseUri(ConfigsGlobal.BASE_URI)
+//                .accept("application/json")
+//                .contentType("application/json")
+//                .body(gson.toJson(loginPOJO));
+//
+//        Response response = request.when().post("/login");
 
-        Response response = request.when().post("/login");
+        Response response = ApiKeyword.postNotAuth(EndPointGlobal.EP_LOGIN, gson.toJson(loginPOJO));
+
         response.then().statusCode(200);
 
         TokenGlobal.TOKEN = response.getBody().path("token");

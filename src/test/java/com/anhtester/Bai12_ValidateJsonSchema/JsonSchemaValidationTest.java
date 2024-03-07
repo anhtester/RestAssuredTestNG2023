@@ -20,7 +20,7 @@ public class JsonSchemaValidationTest extends BaseTest {
 
         // Perform the API request and get the response
         Response response = given()
-                .baseUri(ConfigsGlobal.URI)
+                .baseUri(ConfigsGlobal.BASE_URI)
                 .when()
                 .get("/book/10")
                 .then()
@@ -44,7 +44,7 @@ public class JsonSchemaValidationTest extends BaseTest {
 
         // Perform the API request and get the response
         Response response = given()
-                .baseUri(ConfigsGlobal.URI)
+                .baseUri(ConfigsGlobal.BASE_URI)
                 .when()
                 .get("/books")
                 .then()

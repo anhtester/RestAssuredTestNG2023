@@ -73,7 +73,7 @@ public class BookTest extends BaseTest {
         Gson gson = new Gson();
 
         RequestSpecification request = given();
-        request.baseUri(ConfigsGlobal.URI)
+        request.baseUri(ConfigsGlobal.BASE_URI)
                 .accept(ContentType.JSON)
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer " + TokenGlobal.TOKEN)
