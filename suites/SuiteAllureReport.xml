@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite Demo Allure Report" verbose="1">
+    <test name="Test Allure Report">
+        <classes>
+            <class name="com.anhtester.Bai18_AllureReport.BookTest_AllureReport"/>
+            <class name="com.anhtester.Bai18_AllureReport.CategoryTest_AllureReport"/>
+        </classes>
+    </test>
+</suite>

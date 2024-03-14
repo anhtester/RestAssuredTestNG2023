@@ -1,4 +1,4 @@
-package com.anhtester.Bai17_Keyword;
+package com.anhtester.Bai18_AllureReport;
 
 import com.anhtester.common.BaseTest;
 import com.anhtester.globals.EndPointGlobal;
@@ -6,24 +6,29 @@ import com.anhtester.helpers.JsonHelper;
 import com.anhtester.keywords.ApiKeyword;
 import com.anhtester.listeners.TestListener;
 import com.anhtester.utils.LogUtils;
-import io.restassured.path.json.JsonPath;
+import io.qameta.allure.*;
 import io.restassured.response.Response;
 import net.datafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.util.Locale;
 
-import static io.restassured.RestAssured.given;
-
 @Listeners(TestListener.class)
-public class CategoryTest_Keyword extends BaseTest {
+public class CategoryTest_AllureReport extends BaseTest {
 
     int CATEGORY_ID;
     String CATEGORY_NAME;
 
     @Test(priority = 1)
+    @Severity(SeverityLevel.CRITICAL)
+    @Epic("Regression Test")
+    @Feature("Book Test")
+    @Story("Test Add New Gook")
+    @Description("Add new Book")
+    @Link("https://jira.com/anhtester/apitest/books/10")
     public void testAddNewCategory() {
         String dataFile = "src/test/resources/testdata/CreateCategory.json";
 
@@ -33,7 +38,7 @@ public class CategoryTest_Keyword extends BaseTest {
 
         JsonHelper.updateValueJsonFile(dataFile, "name", CATEGORY_NAME);
 
-        Response response = ApiKeyword.post(EndPointGlobal.EP_CATEGORY, dataFile);
+        Response response = ApiKeyword.post(EndPointGlobal.EP_CATEGORY, new File(dataFile));
 
         //response.then().statusCode(200);
         ApiKeyword.verifyStatusCode(response, 200);

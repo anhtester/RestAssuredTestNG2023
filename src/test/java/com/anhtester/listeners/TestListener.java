@@ -2,6 +2,7 @@ package com.anhtester.listeners;
 
 import com.anhtester.globals.ConfigsGlobal;
 import com.anhtester.helpers.PropertiesHelper;
+import com.anhtester.reports.AllureManager;
 import com.anhtester.utils.LogUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -42,6 +43,9 @@ public class TestListener implements ITestListener {
         //Cộng 1 đơn vị vào 1 biến toàn cục để nắm bắt số lượng tcs pass
         LogUtils.info("Test case " + result.getName() + " is passed.");
         ConfigsGlobal.PASSED_TOTAL++;
+
+        //Add text detail to Allure Report
+        //AllureManager.saveTextLog("Test case " + result.getName() + " is passed.");
     }
 
     @Override
@@ -50,6 +54,9 @@ public class TestListener implements ITestListener {
         LogUtils.error("Test case " + result.getName() + " is failed.");
         LogUtils.error(result.getThrowable());
         ConfigsGlobal.FAILED_TOTAL++;
+
+        //Add text detail to Allure Report
+        //AllureManager.saveTextLog("Test case " + result.getName() + " is failed.");
     }
 
     @Override
