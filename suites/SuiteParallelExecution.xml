@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite Demo Allure Report" verbose="1" parallel="tests">
+    <test name="Test Parallel version 1" parallel="methods">
+        <classes>
+            <class name="com.anhtester.Bai6_POJO_JSON.DemoPOJO_MultiLevel"/>
+            <class name="com.anhtester.Bai19_ParallelExecution.BookingTest_Parallel"/>
+        </classes>
+    </test>
+    <test name="Test Parallel version 2" parallel="methods">
+        <classes>
+            <class name="com.anhtester.Bai6_POJO_JSON.DemoPOJO_MultiLevel"/>
+            <class name="com.anhtester.Bai19_ParallelExecution.BookingTest_Parallel"/>
+        </classes>
+    </test>
+</suite>

@@ -28,7 +28,7 @@ public class DemoPOJO_MultiLevel {
 
         //Set giá trị cho các fields không chứa cấp bậc
         bookingBody.setFirstname("Anh");
-        bookingBody.setLastname("Tester 02");
+        bookingBody.setLastname("Tester");
         bookingBody.setTotalprice(120);
         bookingBody.setDepositpaid(false);
         bookingBody.setAdditionalneeds("Automation");
