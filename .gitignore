@@ -17,7 +17,6 @@ buildNumber.properties
 .classpath
 *.iml
 .idea/
-reports/
 report/
 out/
 logs/
