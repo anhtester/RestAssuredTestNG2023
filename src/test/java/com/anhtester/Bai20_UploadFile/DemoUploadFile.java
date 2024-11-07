@@ -17,13 +17,14 @@ import static org.hamcrest.Matchers.hasKey;
 public class DemoUploadFile extends BaseTest {
     @Test
     public void testUploadFile() {
-        File file = new File(SystemHelper.getCurrentDir() + "src/test/resources/testdata/image_testing_done.jpg");
+        File file = new File(SystemHelper.getCurrentDir() + "src/test/resources/testdata/sen.jpg");
 
         RestAssured.baseURI = "https://api.anhtester.com/api";
         String endpoint = "/image";
 
         given().header("Authorization", "Bearer " + TokenGlobal.TOKEN)
-                .multiPart("image", file)
+                .multiPart("image", file) //Key "image" phụ thuộc vào hệ thống cung cấp thông qua API document
+                .contentType(ContentType.MULTIPART)
                 .when().post(endpoint)
                 .then().log().all()
                 .statusCode(200)
