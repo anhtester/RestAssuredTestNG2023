@@ -86,7 +86,7 @@ public class CategoryTest extends BaseTest {
 
         JsonPath jsonPath = response.jsonPath();
 
-        System.out.println("CATEGPRY NAME: " + jsonPath.get("response.name").toString());
+        System.out.println("CATEGORY NAME: " + jsonPath.get("response.name").toString());
 
         Assert.assertEquals(jsonPath.get("response.name"), "Category 06 updated");
 
