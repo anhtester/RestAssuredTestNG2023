@@ -13,6 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.util.Locale;
 
 import static io.restassured.RestAssured.given;
@@ -33,7 +34,8 @@ public class CategoryTest_Keyword extends BaseTest {
 
         JsonHelper.updateValueJsonFile(dataFile, "name", CATEGORY_NAME);
 
-        Response response = ApiKeyword.post(EndPointGlobal.EP_CATEGORY, dataFile);
+        //Chú ý: chỗ này phải "new File(dataFile)" nó mới nhận diện đúng hàm chung truyền File nhé các bạn
+        Response response = ApiKeyword.post(EndPointGlobal.EP_CATEGORY, new File(dataFile));
 
         //response.then().statusCode(200);
         ApiKeyword.verifyStatusCode(response, 200);

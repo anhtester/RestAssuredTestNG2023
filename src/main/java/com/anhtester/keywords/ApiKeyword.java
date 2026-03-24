@@ -237,4 +237,13 @@ public class ApiKeyword {
         AllureManager.saveTextLog("Verify Status code: " + response.getStatusCode() + " == " + expectedStatusCode);
         Assert.assertEquals(response.getStatusCode(), expectedStatusCode, "FAIL. The status code not match.");
     }
+
+    public static void sleep(double seconds) {
+        try {
+            Thread.sleep((long) (seconds * 1000));
+        } catch (InterruptedException e) {
+
+        }
+    }
+
 }

@@ -63,6 +63,7 @@ public class JsonHelper {
 
             //Store new Json data to new file
             File jsonFile = new File(filePath);
+
             OutputStream outputStream = new FileOutputStream(jsonFile);
             outputStream.write(gson.toJson(jsonObject).getBytes());
             outputStream.flush();
